@@ -1,0 +1,257 @@
+pll config ok
+die_num:0,die_ordinal:0
+Firmware version:1.5;disable ECC
+PHY0 training process:100%
+PHY1 training process:100%
+DDR type:LPDDR5;Size:32GB,Data Rate:6400MT/s
+DDR self test OK
+
+OpenSBI v1.5
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name             : Milk-V Megrez
+Platform Features         : medeleg
+Platform HART Count       : 4
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 1000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : eswin_eic770x_reset
+Platform Shutdown Device  : eswin_eic770x_reset
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 357 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 101 KB
+Firmware Heap Offset      : 0x4f000
+Firmware Heap Size        : 41 KB (total), 2 KB (reserved), 11 KB (used), 27 KB (free)
+Firmware Scratch Size     : 4096 B (total), 416 B (used), 3680 B (free)
+Runtime SBI Version       : 2.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 1
+Domain0 HARTs             : 0*,1*,2*,3*
+Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000080000000-0x000000008007ffff M: (R,W) S/U: ()
+Domain0 Region02          : 0x000000c000000000-0x000000d000000000 M: () S/U: (R,W)
+Domain0 Region03          : 0x0000001000000000-0x0000008000000000 M: () S/U: ()
+Domain0 Region04          : 0x0000000000000000-0xffffffffffffffff M: () S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x00000000f8000000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 1
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.11
+Boot HART Base ISA        : rv64imafdchx
+Boot HART ISA Extensions  : sscofpmf,zihpm,sdtrig
+Boot HART PMP Count       : 8
+Boot HART PMP Granularity : 12 bits
+Boot HART PMP Address Bits: 39
+Boot HART MHPM Info       : 4 (0x00000078)
+Boot HART Debug Triggers  : 4 triggers
+Boot HART MIDELEG         : 0x0000000000002666
+Boot HART MEDELEG         : 0x0000000000f0b509
+
+Hardware Feature[7C1]: 0x4000
+Hardware Feature[7C2]: 0x80
+Hardware Feature[7C3]: 0x104095c1be241
+Hardware Feature[7C4]: 0x1d3ff
+
+
+U-Boot 2024.01-g5414c4be (Apr 23 2025 - 14:37:01 +0000)
+
+CPU:   rv64imafdc_zba_zbb
+Model: Milk-V Megrez
+DRAM:  32 GiB (effective 16 GiB)
+Core:  154 devices, 31 uclasses, devicetree: separate
+Warning: Device tree includes old 'u-boot,dm-' tags: please fix by 2023.07!
+MMC:   sdhci@50450000: 0, sd@50460000: 1
+Loading Environment from SPIFlash... SF: Detected w25q64dw with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+OK
+There is no valid bmp file at the given address
+[VO][INFO] display_init:480 Die[0] Eswin UBOOT DRM driver version: v1.0.1
+[VO][INFO] display_init:518 no display connected!
+In:    serial,usbkbd
+Out:   serial
+Err:   vidconsole,serial
+Success to initialize SPI flash at spi@51800000
+Bootspi flash write protection enabled
+Get board info from flash
+ERROR: There is no valid hardware board information!!!
+Cpu volatge no need boost at 1.6 Ghz!
+Card did not respond to voltage select! : -110
+Low power features will not be supported!
+Net:   eth0: ethernet@50400000
+Working FDT set to eecf4cd0
+starting USB...
+Bus usb1@50490000: Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.10
+scanning bus usb1@50490000 for devices... 4 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+AHCI 0001.0301 32 slots 1 ports 6 Gbps 0x1 impl SATA mode
+flags: 64bit ncq stag pm led clo only pmp pio slum part 
+scanning bus for devices...
+Rescanning SATA bus for devices...
+SATA Device Info:
+S/N: 30155284676
+Product model number: HS-SSD-WAVE(N) 256G
+Firmware version: HS19052
+Capacity: 500118192 sectors
+Autoboot in 5 seconds
+=> bdinfo
+boot_params = 0x0000000000000000
+DRAM bank   = 0x0000000000000000
+-> start    = 0x0000000080000000
+-> size     = 0x0000000400000000
+flashstart  = 0x0000000000000000
+flashsize   = 0x0000000000000000
+flashoffset = 0x0000000000000000
+baudrate    = 115200 bps
+relocaddr   = 0x00000000fed80000
+reloc off   = 0x000000007eb80000
+Build       = 64-bit
+current eth = ethernet@50400000
+ethaddr     = 06:54:89:eb:d5:4e
+IP addr     = <NULL>
+fdt_blob    = 0x00000000eecf4cd0
+new_fdt     = 0x00000000eecf4cd0
+fdt_size    = 0x000000000000b100
+Video       = display-subsystem active
+FB base     = 0x00000000ff000000
+FB size     = 1920x1080x32
+lmb_dump_all:
+ memory.cnt = 0x1 / max = 0x10
+ memory[0]      [0x80000000-0x47fffffff], 0x400000000 bytes flags: 0
+ reserved.cnt = 0x5 / max = 0x10
+ reserved[0]    [0x80000000-0x8007ffff], 0x00080000 bytes flags: 4
+ reserved[1]    [0xdfff0000-0xe0ffffff], 0x01010000 bytes flags: 4
+ reserved[2]    [0xe9cf3000-0xffffffff], 0x1630d000 bytes flags: 0
+ reserved[3]    [0x87fffc000-0x87fffffff], 0x00004000 bytes flags: 0
+ reserved[4]    [0x1000000000-0x10003fffff], 0x00400000 bytes flags: 4
+devicetree  = separate
+
+
+# cat /proc/iomem
+40000000-407fffff : 54000000.pcie config
+41000000-4fffffff : pcie@0x54000000
+  41000000-410fffff : 0000:00:00.0
+  41100000-411fffff : PCI Bus 0000:01
+    41100000-4113ffff : 0000:01:00.0
+    41140000-4115ffff : 0000:01:00.0
+    41160000-41163fff : 0000:01:00.1
+      41160000-41163fff : ICH HD audio
+  48000000-4fffffff : 0000:00:00.0
+50000000-500fffff : 54000000.pcie mgmt
+50100000-5010006b : es_vdec_vcmd_drv
+50100200-501002ff : es_vdec0
+50100800-501013ff : es_vdec0
+50110000-501100ff : es_venc_vcmd_drv
+50112000-501120ff : es_venc_vcmd_drv
+50120000-5012006b : es_vdec_vcmd_drv
+50120200-501202ff : es_vdec0
+50120800-501213ff : es_vdec0
+50130000-501300ff : es_venc_vcmd_drv
+50132000-501320ff : es_venc_vcmd_drv
+50140000-5017ffff : galcore register region
+50180000-501bffff : galcore register region
+50200000-5020ffff : 50200000.i2s0 i2s0@50200000
+50210000-5021ffff : 50210000.i2s1 i2s1@50210000
+502a0000-502bffff : 502a0000.hdmi hdmi@502a0000
+502c0000-502c00ff : 502c0000.display_control display_control@502c0000
+502c0180-502c087f : 502c0000.display_control display_control@502c0000
+502c1400-502c27ff : 502c0000.display_control display_control@502c0000
+50400000-5040ffff : 50400000.ethernet ethernet@50400000
+50410000-5041ffff : 50410000.ethernet ethernet@50410000
+50420000-5042ffff : 50420000.sata sata@0x50420000
+50430000-5043ffff : 50430000.dma-controller-hsp dma-controller-hsp@0x50430000
+50450000-5045ffff : 50450000.mmc mmc@50450000
+50460000-5046ffff : 50460000.mmc mmc@0x50460000
+50470000-5047ffff : 50470000.mmc mmc@0x50470000
+50480000-50487fff : dwc3@50480000
+  50480000-50487fff : xhci-hcd.4.auto dwc3@50480000
+5048c100-5048ffff : 50480000.dwc3 dwc3@50480000
+50490000-50497fff : dwc3@50490000
+  50490000-50497fff : xhci-hcd.5.auto dwc3@50490000
+5049c100-5049ffff : 50490000.dwc3 dwc3@50490000
+50810000-50813fff : 50810000.spi spi@50810000
+50818000-5081bfff : 50818000.pwm pwm@0x50818000
+50900000-5090ffff : serial
+50910000-5091ffff : serial
+50920000-5092ffff : serial
+50950000-50957fff : 50950000.i2c i2c@50950000
+50960000-5096ffff : 50960000.i2c i2c@50960000
+50980000-50987fff : 50980000.i2c i2c@50980000
+509d0000-509d7fff : 509d0000.i2c i2c@509d0000
+50a00000-50a0ffff : 50a00000.mbox mbox@50a00000
+50a10000-50a1ffff : 50a00000.mbox mbox@50a00000
+50a20000-50a2ffff : 50a20000.mbox mbox@50a20000
+50a30000-50a3ffff : 50a20000.mbox mbox@50a20000
+50a60000-50a6ffff : 50a60000.mbox mbox@50a60000
+50a70000-50a7ffff : 50a60000.mbox mbox@50a60000
+50b00000-50b0ffff : 50b00000.pvt pvt@0x50b00000
+50b50000-50b5ffff : 50b50000.fan_control fan_control@50b50000
+50c00000-50c00dff : 50c00000.iommu
+50c08000-50c097ff : 50c00000.iommu
+50c10000-50c10dff : 50c00000.iommu
+51020000-51020bff : 51020000.dewarp dewarp@51020000
+51020c00-51020d1f : 51020000.dewarp dewarp@51020000
+51600000-5160007f : 51600000.gpio gpio@51600000
+51600080-517fffff : 51600080.pinctrl pinctrl@0x51600080
+51800000-51807fff : 51800000.spi spi@51800000
+51808000-5180ffff : 51808000.power-controller power-controller@51808000
+51810000-51817fff : 52280400.dsp_subsys dsp_subsys@52280400
+51818000-518183ff : 51818000.rtc rtc@51818000
+51828000-5182ffff : 51800000.spi spi@51800000
+51830000-51837fff : 51830000.i2c i2c@51830000
+51838000-5183ffff : 51838000.i2c i2c@51838000
+51840000-51847fff : 51840000.timer timer@0x51840000
+51848000-5184ffff : 51848000.timer timer@0x51848000
+51850000-51857fff : 51850000.timer timer@0x51850000
+51858000-5185ffff : 51858000.timer timer@0x51858000
+518c0000-518cffff : 518c0000.dma-controller-aon dma-controller-aon@0x518c0000
+52002c00-52006bff : 52002c00.d0_sys_noc d0_sys_noc@52002C00
+52021400-520253ff : 52021400.d0_media_noc d0_media_noc@52021400
+52041400-520453ff : 52041400.d0_realtime_noc d0_realtime_noc@52041400
+52060000-52063fff : 52060000.d0_cfg_noc d0_cfg_noc
+52081400-520853ff : 52081400.d0_llc_noc d0_llc_noc@52081400
+52280400-522903ff : 52280400.dsp_subsys dsp_subsys@52280400
+52300000-5233ffff : 52300000.ddr-controller ddr-controller@52300000
+52360000-5237ffff : 52360000.pvt pvt@0x52360000
+52380000-523bffff : 52380000.ddr-controller ddr-controller@52380000
+54000000-57ffffff : 54000000.pcie dbi
+59000000-593fffff : Reserved
+5c000000-5c007fff : 51800000.spi spi@51800000
+80000000-8007ffff : Reserved
+80080000-dffeffff : System RAM
+  80202000-81c63bef : Kernel image
+    80202000-80dd81c1 : Kernel code
+    81200000-817fffff : Kernel rodata
+    81a00000-81b575ff : Kernel data
+    81b58000-81c63bef : Kernel bss
+dfff0000-e0ffffff : Reserved
+e1000000-ffffefff : System RAM
+fffff000-ffffffff : Reserved
+100000000-1ffffefff : System RAM
+1fffff000-1ffffffff : Reserved
+200000000-2ffffefff : System RAM
+2fffff000-2ffffffff : Reserved
+300000000-87fffffff : System RAM
+8000000000-81ffffffff : pcie@0x54000000
+  8000000000-817fffffff : PCI Bus 0000:01
+    8000000000-80ffffffff : 0000:01:00.0
+    8100000000-81001fffff : 0000:01:00.0
+
+
